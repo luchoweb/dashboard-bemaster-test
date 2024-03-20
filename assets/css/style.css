@@ -1,0 +1,20 @@
+:root {
+  --color-primary: #5147f6;
+  --color-gray: #f4f4f4;
+  --color-text: #000000;
+  --fw-bold: 700;
+  --fw-normal: 300;
+  --ft-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: var(--color-gray);
+  color: var(--color-text);
+  font-family: var(--ft-family);
+  font-size: 16px;
+  font-optical-sizing: auto;
+  font-weight: var(--fw-normal);
+  font-style: normal;
+  margin: 0;
+  padding: 1em;
+}
