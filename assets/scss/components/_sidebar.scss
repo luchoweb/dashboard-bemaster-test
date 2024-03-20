@@ -5,7 +5,6 @@
 
   &-arrow {
     cursor: pointer;
-    display: none;
     position: absolute;
     right: var(--spacing-md-box);
     top: var(--spacing-md-box);
@@ -42,10 +41,6 @@
 
   @media (min-width: $break-lg) {
     width: 100%;
-
-    &-arrow {
-      display: block;
-    }
   }
 
   // IMPORTS

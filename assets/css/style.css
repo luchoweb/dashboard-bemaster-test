@@ -8,6 +8,7 @@
   --ft-family: "Montserrat", sans-serif;
   --spacing-box: 1rem;
   --spacing-md-box: 0.7rem;
+  --transition: all 0.2s ease-in-out;
 }
 
 body {
@@ -75,7 +76,6 @@ strong {
 }
 .dashboard .sidebar-arrow {
   cursor: pointer;
-  display: none;
   position: absolute;
   right: var(--spacing-md-box);
   top: var(--spacing-md-box);
@@ -108,9 +108,6 @@ strong {
 @media (min-width: 769px) {
   .dashboard .sidebar {
     width: 100%;
-  }
-  .dashboard .sidebar-arrow {
-    display: block;
   }
 }
 .dashboard .sidebar .menu {
@@ -190,7 +187,7 @@ strong {
   margin: 0;
 }
 .dashboard .sidebar .plan-details .details-info-free {
-  font-size: 11px;
+  font-size: 10px;
 }
 .dashboard .sidebar .plan-details .details-bar {
   background-color: var(--color-secondary);
@@ -225,4 +222,60 @@ strong {
   padding: 3rem;
   max-height: 100%;
   overflow-y: auto;
+}
+.dashboard .content .files-container {
+  overflow-x: auto;
+}
+.dashboard .content .files-table {
+  border: none;
+  border-spacing: 0;
+  font-size: 14px;
+  min-width: 640px;
+  width: 100%;
+}
+.dashboard .content .files-table th,
+.dashboard .content .files-table td {
+  border-bottom: 1px solid var(--color-bg);
+  padding: var(--spacing-md-box) 3px;
+  text-align: center;
+}
+.dashboard .content .files-table th.filename,
+.dashboard .content .files-table td.filename {
+  text-align: left;
+}
+.dashboard .content .files-table thead th.filename {
+  width: 40%;
+}
+@media (min-width: 769px) {
+  .dashboard .content .files-table thead th.filename {
+    width: 50%;
+  }
+}
+.dashboard .content .files-table tbody tr {
+  cursor: pointer;
+  transition: var(--transition);
+}
+.dashboard .content .files-table tbody tr:hover {
+  background-color: var(--color-bg);
+}
+.dashboard .content .files-table tbody tr td.filename {
+  align-items: center;
+  display: flex;
+  gap: 0 var(--spacing-md-box);
+  width: 100%;
+}
+.dashboard .content .files-table tbody tr td.filename i {
+  color: var(--color-primary);
+}
+.dashboard .content .files-table tbody tr td.filename span {
+  height: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 200px;
+}
+@media (min-width: 769px) {
+  .dashboard .content .files-table tbody tr td.filename span {
+    width: 30dvw;
+  }
 }
