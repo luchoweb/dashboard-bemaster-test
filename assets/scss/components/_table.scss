@@ -19,6 +19,29 @@
       &.filename {
         text-align: left;
       }
+
+      input[type="checkbox"] {
+        -webkit-appearance: none;
+        appearance: none;
+        background-color: white;
+        border: 1px solid var(--color-border);
+        border-radius: 2px;
+        cursor: pointer;
+        height: $checkbox-size;
+        margin: 0;
+        width: $checkbox-size;
+
+        &:checked {
+          &::before {
+            background-color: var(--color-primary);
+            content: "";
+            display: block;
+            margin: 2px auto;
+            height: calc($checkbox-size / 2);
+            width: calc($checkbox-size / 2);
+          }
+        }
+      }
     }
 
     thead {
@@ -36,7 +59,7 @@
     tbody {
       tr {
         transition: var(--transition);
-  
+
         &:hover {
           background-color: var(--color-bg);
         }
@@ -53,14 +76,14 @@
               i {
                 color: var(--color-primary);
               }
-  
+
               span {
                 color: #000;
                 overflow: hidden;
                 text-overflow: ellipsis;
                 white-space: nowrap;
                 width: 200px;
-  
+
                 @media (min-width: $break-lg) {
                   width: 30dvw;
                 }

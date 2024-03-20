@@ -324,6 +324,27 @@ strong {
 .dashboard .content .files-table td.filename {
   text-align: left;
 }
+.dashboard .content .files-table th input[type=checkbox],
+.dashboard .content .files-table td input[type=checkbox] {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: white;
+  border: 1px solid var(--color-border);
+  border-radius: 2px;
+  cursor: pointer;
+  height: 12px;
+  margin: 0;
+  width: 12px;
+}
+.dashboard .content .files-table th input[type=checkbox]:checked::before,
+.dashboard .content .files-table td input[type=checkbox]:checked::before {
+  background-color: var(--color-primary);
+  content: "";
+  display: block;
+  margin: 2px auto;
+  height: 6px;
+  width: 6px;
+}
 .dashboard .content .files-table thead th.filename {
   width: 40%;
 }

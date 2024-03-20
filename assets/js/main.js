@@ -15,6 +15,20 @@ const closeOpenSidebar = () => {
     mainDashboard.classList.add(sidebarCloseClassName);
     mainDashboard.classList.remove(sidebarOpenClassName);
   });
+};
+
+const selectFiles = () => {
+  const checkboxes = document.querySelectorAll('td input[type="checkbox"]');
+  const checkAll = document.getElementById("check-all");
+
+  checkAll.addEventListener("click", () => {
+    for (const checkbox of checkboxes) {
+      checkbox.checked = checkAll.checked;
+    }
+  });
 }
 
-window.onload = closeOpenSidebar;
+window.addEventListener("load", () => {
+  closeOpenSidebar();
+  selectFiles();
+});
