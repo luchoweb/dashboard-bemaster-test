@@ -1,8 +1,17 @@
-// VARS
-$logo-size: 60px;
-
-// STYLES
 .sidebar {
+  position: relative;
+  transition: all 0.2s ease-in-out;
+  width: 80px;
+
+  &-arrow {
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    right: var(--spacing-md-box);
+    top: var(--spacing-md-box);
+    transition: all 0.2s ease-in-out;
+  }
+
   &-container {
     display: flex;
     flex-wrap: wrap;
@@ -28,6 +37,14 @@ $logo-size: 60px;
     i {
       color: white;
       font-size: $logo-size;
+    }
+  }
+
+  @media (min-width: $break-lg) {
+    width: 100%;
+
+    &-arrow {
+      display: block;
     }
   }
 

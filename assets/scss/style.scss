@@ -1,3 +1,5 @@
+@import "./includes/vars";
+
 :root {
   --color-border: #d8d8d8;
   --color-bg: #f4f4f4;
@@ -43,7 +45,7 @@ strong {
   .row {
     display: grid;
     grid-gap: 0 var(--spacing-box);
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: auto 4fr;
   }
 
   .sidebar,
@@ -52,6 +54,38 @@ strong {
     border-radius: var(--spacing-md-box);
     height: calc(100dvh - (var(--spacing-box) * 2));
     min-height: 750px;
+  }
+
+  &.sidebar-sm {
+    .row {
+      grid-template-columns: auto 4fr;
+    }
+
+    .sidebar {
+      width: 80px;
+
+      &-arrow {
+        transform: rotate(180deg);
+      }
+
+      .menu {
+        &-link {
+          span, strong {
+            display: none;
+          }
+        }
+      }
+
+      .plan {
+        display: none;
+      }
+    }
+  }
+
+  @media (min-width: $break-lg) {
+    .row {
+      grid-template-columns: 1fr 4fr;
+    }
   }
 
   // IMPORTS

@@ -23,6 +23,11 @@
     padding: var(--spacing-md-box) var(--spacing-box);
     transition: all 0.2s ease-in-out;
 
+    span,
+    strong {
+      display: none;
+    }
+
     &.active,
     &:hover {
       background-color: var(--color-primary);
@@ -33,6 +38,13 @@
       background-color: transparent;
       color: #000;
       pointer-events: none;
+    }
+
+    @media (min-width: $break-lg) {
+      span,
+      strong {
+        display: inline-block;
+      }
     }
   }
 }

@@ -39,7 +39,7 @@ strong {
 .dashboard .row {
   display: grid;
   grid-gap: 0 var(--spacing-box);
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: auto 4fr;
 }
 .dashboard .sidebar,
 .dashboard .content {
@@ -47,6 +47,39 @@ strong {
   border-radius: var(--spacing-md-box);
   height: calc(100dvh - var(--spacing-box) * 2);
   min-height: 750px;
+}
+.dashboard.sidebar-sm .row {
+  grid-template-columns: auto 4fr;
+}
+.dashboard.sidebar-sm .sidebar {
+  width: 80px;
+}
+.dashboard.sidebar-sm .sidebar-arrow {
+  transform: rotate(180deg);
+}
+.dashboard.sidebar-sm .sidebar .menu-link span, .dashboard.sidebar-sm .sidebar .menu-link strong {
+  display: none;
+}
+.dashboard.sidebar-sm .sidebar .plan {
+  display: none;
+}
+@media (min-width: 769px) {
+  .dashboard .row {
+    grid-template-columns: 1fr 4fr;
+  }
+}
+.dashboard .sidebar {
+  position: relative;
+  transition: all 0.2s ease-in-out;
+  width: 80px;
+}
+.dashboard .sidebar-arrow {
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  right: var(--spacing-md-box);
+  top: var(--spacing-md-box);
+  transition: all 0.2s ease-in-out;
 }
 .dashboard .sidebar-container {
   display: flex;
@@ -72,6 +105,14 @@ strong {
   color: white;
   font-size: 60px;
 }
+@media (min-width: 769px) {
+  .dashboard .sidebar {
+    width: 100%;
+  }
+  .dashboard .sidebar-arrow {
+    display: block;
+  }
+}
 .dashboard .sidebar .menu {
   align-self: flex-start;
   list-style: none;
@@ -95,6 +136,10 @@ strong {
   padding: var(--spacing-md-box) var(--spacing-box);
   transition: all 0.2s ease-in-out;
 }
+.dashboard .sidebar .menu-link span,
+.dashboard .sidebar .menu-link strong {
+  display: none;
+}
 .dashboard .sidebar .menu-link.active, .dashboard .sidebar .menu-link:hover {
   background-color: var(--color-primary);
   color: white;
@@ -104,8 +149,15 @@ strong {
   color: #000;
   pointer-events: none;
 }
+@media (min-width: 769px) {
+  .dashboard .sidebar .menu-link span,
+  .dashboard .sidebar .menu-link strong {
+    display: inline-block;
+  }
+}
 .dashboard .sidebar .plan {
   align-self: flex-end;
+  display: none;
   width: 100%;
 }
 .dashboard .sidebar .plan .container {
@@ -159,6 +211,11 @@ strong {
   font-size: 12px;
   padding: 5px 15px;
   text-decoration: none;
+}
+@media (min-width: 769px) {
+  .dashboard .sidebar .plan {
+    display: block;
+  }
 }
 .dashboard .content {
   overflow: hidden;
