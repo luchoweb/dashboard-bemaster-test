@@ -35,7 +35,6 @@
 
     tbody {
       tr {
-        cursor: pointer;
         transition: var(--transition);
   
         &:hover {
@@ -44,24 +43,27 @@
 
         td {
           &.filename {
-            align-items: center;
-            display: flex;
-            gap: 0 var(--spacing-md-box);
-            width: 100%;
-    
-            i {
-              color: var(--color-primary);
-            }
+            a {
+              align-items: center;
+              display: flex;
+              gap: 0 var(--spacing-md-box);
+              text-decoration: none;
+              width: 100%;
 
-            span {
-              height: 14px;
-              overflow: hidden;
-              text-overflow: ellipsis;
-              white-space: nowrap;
-              width: 200px;
-
-              @media (min-width: $break-lg) {
-                width: 30dvw;
+              i {
+                color: var(--color-primary);
+              }
+  
+              span {
+                color: #000;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                width: 200px;
+  
+                @media (min-width: $break-lg) {
+                  width: 30dvw;
+                }
               }
             }
           }

@@ -282,30 +282,30 @@ strong {
   }
 }
 .dashboard .content .files-table tbody tr {
-  cursor: pointer;
   transition: var(--transition);
 }
 .dashboard .content .files-table tbody tr:hover {
   background-color: var(--color-bg);
 }
-.dashboard .content .files-table tbody tr td.filename {
+.dashboard .content .files-table tbody tr td.filename a {
   align-items: center;
   display: flex;
   gap: 0 var(--spacing-md-box);
+  text-decoration: none;
   width: 100%;
 }
-.dashboard .content .files-table tbody tr td.filename i {
+.dashboard .content .files-table tbody tr td.filename a i {
   color: var(--color-primary);
 }
-.dashboard .content .files-table tbody tr td.filename span {
-  height: 14px;
+.dashboard .content .files-table tbody tr td.filename a span {
+  color: #000;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   width: 200px;
 }
 @media (min-width: 769px) {
-  .dashboard .content .files-table tbody tr td.filename span {
+  .dashboard .content .files-table tbody tr td.filename a span {
     width: 30dvw;
   }
 }
