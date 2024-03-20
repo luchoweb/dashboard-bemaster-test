@@ -1,21 +1,60 @@
 :root {
+  --color-border: #d8d8d8;
+  --color-bg: #f4f4f4;
   --color-primary: #5147f6;
-  --color-gray: #f4f4f4;
-  --color-text: #000000;
+  --color-secondary: #dedeff;
 
-  --fw-bold: 700;
+  --fw-bold: 600;
   --fw-normal: 300;
   --ft-family: "Montserrat", sans-serif;
+
+  --spacing-box: 1rem;
+  --spacing-md-box: 0.7rem;
 }
 
+// GLOBAL STYLES
+
 body {
-  background-color: var(--color-gray);
-  color: var(--color-text);
+  background-color: var(--color-bg);
+  color: #000000;
   font-family: var(--ft-family);
   font-size: 16px;
   font-optical-sizing: auto;
   font-weight: var(--fw-normal);
   font-style: normal;
   margin: 0;
-  padding: 1em;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+b,
+strong {
+  font-weight: var(--fw-bold);
+}
+
+.dashboard {
+  padding: var(--spacing-box);
+
+  .row {
+    display: grid;
+    grid-gap: 0 var(--spacing-box);
+    grid-template-columns: 1fr 4fr;
+  }
+
+  .sidebar,
+  .content {
+    background-color: white;
+    border-radius: var(--spacing-md-box);
+    height: calc(100dvh - (var(--spacing-box) * 2));
+    min-height: 750px;
+  }
+
+  // IMPORTS
+  @import "./components/sidebar";
+  @import "./components/content";
 }

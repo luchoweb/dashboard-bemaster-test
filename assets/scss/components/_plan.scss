@@ -1,0 +1,70 @@
+.plan {
+  align-self: flex-end;
+  width: 100%;
+
+  .container {
+    background-color: var(--color-bg);
+    border-radius: var(--spacing-box);
+    padding: 1.5rem var(--spacing-box);
+  }
+
+  &-title {
+    font-size: 15px;
+    margin: 0;
+  }
+
+  &-expires {
+    font-size: 11px;
+    margin-top: .3em;
+  }
+
+  &-details {
+    margin: var(--spacing-box) 0;
+
+    .details {
+      &-item {
+        &:not(:last-child) {
+          margin-bottom: var(--spacing-md-box);
+        }
+      }
+
+      &-info {
+        align-items: flex-end;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: .2rem;
+
+        &-name {
+          font-size: 13px;
+          margin: 0;
+        }
+
+        &-free {
+          font-size: 11px;
+        }
+      }
+      &-bar {
+        background-color: var(--color-secondary);
+        border-radius: 2.5px;
+        height: 5px;
+        overflow: hidden;
+        width: 100%;
+
+        &-progress {
+          background-color: var(--color-primary);
+          border-radius: 2.5px;
+          height: 5px;
+        }
+      }
+    }
+  }
+
+  &-btn {
+    background-color: var(--color-primary);
+    border-radius: var(--spacing-box);
+    color: white;
+    font-size: 12px;
+    padding: 5px 15px;
+    text-decoration: none;
+  }
+}

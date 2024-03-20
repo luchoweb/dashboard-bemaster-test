@@ -1,20 +1,171 @@
 :root {
+  --color-border: #d8d8d8;
+  --color-bg: #f4f4f4;
   --color-primary: #5147f6;
-  --color-gray: #f4f4f4;
-  --color-text: #000000;
-  --fw-bold: 700;
+  --color-secondary: #dedeff;
+  --fw-bold: 600;
   --fw-normal: 300;
   --ft-family: "Montserrat", sans-serif;
+  --spacing-box: 1rem;
+  --spacing-md-box: 0.7rem;
 }
 
 body {
-  background-color: var(--color-gray);
-  color: var(--color-text);
+  background-color: var(--color-bg);
+  color: #000000;
   font-family: var(--ft-family);
   font-size: 16px;
   font-optical-sizing: auto;
   font-weight: var(--fw-normal);
   font-style: normal;
   margin: 0;
-  padding: 1em;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+b,
+strong {
+  font-weight: var(--fw-bold);
+}
+
+.dashboard {
+  padding: var(--spacing-box);
+}
+.dashboard .row {
+  display: grid;
+  grid-gap: 0 var(--spacing-box);
+  grid-template-columns: 1fr 4fr;
+}
+.dashboard .sidebar,
+.dashboard .content {
+  background-color: white;
+  border-radius: var(--spacing-md-box);
+  height: calc(100dvh - var(--spacing-box) * 2);
+  min-height: 750px;
+}
+.dashboard .sidebar-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 3rem var(--spacing-md-box);
+  height: calc(100% - 6rem);
+}
+.dashboard .sidebar .logo {
+  align-self: flex-start;
+  margin-bottom: 2.5rem;
+  width: 100%;
+}
+.dashboard .sidebar .logo-box {
+  background-color: var(--color-primary);
+  border-radius: var(--spacing-box);
+  height: 60px;
+  line-height: 60px;
+  margin: 0 auto;
+  text-align: center;
+  width: 60px;
+}
+.dashboard .sidebar .logo i {
+  color: white;
+  font-size: 60px;
+}
+.dashboard .sidebar .menu {
+  align-self: flex-start;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.dashboard .sidebar .menu-box {
+  width: 100%;
+}
+.dashboard .sidebar .menu-item {
+  margin: var(--spacing-box) 0;
+}
+.dashboard .sidebar .menu-link {
+  align-items: center;
+  border-radius: 5px;
+  color: #000;
+  display: flex;
+  gap: 0 var(--spacing-box);
+  text-decoration: none;
+  padding: var(--spacing-md-box) var(--spacing-box);
+  transition: all 0.2s ease-in-out;
+}
+.dashboard .sidebar .menu-link.active, .dashboard .sidebar .menu-link:hover {
+  background-color: var(--color-primary);
+  color: white;
+}
+.dashboard .sidebar .menu-link.disabled {
+  background-color: transparent;
+  color: #000;
+  pointer-events: none;
+}
+.dashboard .sidebar .plan {
+  align-self: flex-end;
+  width: 100%;
+}
+.dashboard .sidebar .plan .container {
+  background-color: var(--color-bg);
+  border-radius: var(--spacing-box);
+  padding: 1.5rem var(--spacing-box);
+}
+.dashboard .sidebar .plan-title {
+  font-size: 15px;
+  margin: 0;
+}
+.dashboard .sidebar .plan-expires {
+  font-size: 11px;
+  margin-top: 0.3em;
+}
+.dashboard .sidebar .plan-details {
+  margin: var(--spacing-box) 0;
+}
+.dashboard .sidebar .plan-details .details-item:not(:last-child) {
+  margin-bottom: var(--spacing-md-box);
+}
+.dashboard .sidebar .plan-details .details-info {
+  align-items: flex-end;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.2rem;
+}
+.dashboard .sidebar .plan-details .details-info-name {
+  font-size: 13px;
+  margin: 0;
+}
+.dashboard .sidebar .plan-details .details-info-free {
+  font-size: 11px;
+}
+.dashboard .sidebar .plan-details .details-bar {
+  background-color: var(--color-secondary);
+  border-radius: 2.5px;
+  height: 5px;
+  overflow: hidden;
+  width: 100%;
+}
+.dashboard .sidebar .plan-details .details-bar-progress {
+  background-color: var(--color-primary);
+  border-radius: 2.5px;
+  height: 5px;
+}
+.dashboard .sidebar .plan-btn {
+  background-color: var(--color-primary);
+  border-radius: var(--spacing-box);
+  color: white;
+  font-size: 12px;
+  padding: 5px 15px;
+  text-decoration: none;
+}
+.dashboard .content {
+  overflow: hidden;
+  word-break: break-all;
+}
+.dashboard .content .container {
+  padding: 3rem;
+  max-height: 100%;
+  overflow-y: auto;
 }

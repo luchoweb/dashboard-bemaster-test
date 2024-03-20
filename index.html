@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap"
       rel="stylesheet"
     />
     <link
@@ -17,17 +17,102 @@
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
-    <!--<i class="material-symbols-outlined">browse</i>
-    <i class="material-symbols-outlined">newsstand</i>
-    <i class="material-symbols-outlined">finance</i>
-    <i class="material-symbols-outlined">delete</i>
-    <i class="material-symbols-outlined">settings</i>
-    <i class="material-symbols-outlined">folder</i>
-    <i class="material-symbols-outlined">help</i>
-    <i class="material-symbols-outlined">arrow_back</i>
-    <i class="material-symbols-outlined">play_circle</i>
-    <i class="material-symbols-outlined">navigate_before</i>-->
+    <main class="dashboard">
+      <div class="row">
+        <div class="sidebar">
+          <div class="sidebar-container">
+            <div class="menu-box">
+              <div class="logo">
+                <div class="logo-box">
+                  <i class="material-symbols-outlined">play_circle</i>
+                </div>
+              </div>
 
-    <h1>Hola</h1>
+              <ul class="menu">
+                <li class="menu-item">
+                  <a href="javascript:;" class="menu-link disabled">
+                    <i class="material-symbols-outlined">browse</i>
+                    <strong>Dashboard</strong>
+                  </a>
+                </li>
+
+                <li class="menu-item">
+                  <a href="#" class="menu-link active">
+                    <i class="material-symbols-outlined">folder</i>
+                    <span>Videos</span>
+                  </a>
+                </li>
+
+                <li class="menu-item">
+                  <a href="#" class="menu-link">
+                    <i class="material-symbols-outlined">play_circle</i>
+                    <span>Player</span>
+                  </a>
+                </li>
+
+                <li class="menu-item">
+                  <a href="#" class="menu-link">
+                    <i class="material-symbols-outlined">finance</i>
+                    <span>Analytics</span>
+                  </a>
+                </li>
+
+                <li class="menu-item">
+                  <a href="#" class="menu-link">
+                    <i class="material-symbols-outlined">settings</i>
+                    <span>Configuraciones</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="plan">
+              <div class="container">
+                <p class="plan-title">
+                  <strong>Mi Plan - Plus</strong>
+                </p>
+                <p class="plan-expires">El uso se renueva el 3-may-23</p>
+
+                <div class="plan-details">
+                  <div class="details-item">
+                    <div class="details-info">
+                      <p class="details-info-name">Almacenamiento</p>
+                      <info class="details-info-free">23.5G / 1T</info>
+                    </div>
+                    <div class="details-bar">
+                      <div
+                        class="details-bar-progress"
+                        style="width: 75%"
+                      ></div>
+                    </div>
+                  </div>
+
+                  <div class="details-item">
+                    <div class="details-info">
+                      <p class="details-info-name">Banda Mensual</p>
+                      <info class="details-info-free">3.4G / 5T</info>
+                    </div>
+                    <div class="details-bar">
+                      <div
+                        class="details-bar-progress"
+                        style="width: 60%"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+
+                <a href="#" class="plan-btn">Administrar Plan</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="content">
+          <div class="container">
+            <p>content</p>
+          </div>
+        </div>
+      </div>
+    </main>
   </body>
 </html>

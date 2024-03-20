@@ -1,0 +1,14 @@
+.content {
+  overflow: hidden;
+  word-break: break-all;
+
+  .container {
+    padding: 3rem;
+    max-height: 100%;
+    overflow-y: auto;
+  }
+
+  // IMPORTS
+  @import "./search";
+  @import "./table";
+}
