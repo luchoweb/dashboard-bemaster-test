@@ -8,6 +8,7 @@
     position: absolute;
     right: var(--spacing-md-box);
     top: var(--spacing-md-box);
+    transform: rotate(180deg);
     transition: all 0.2s ease-in-out;
   }
 
@@ -41,6 +42,10 @@
 
   @media (min-width: $break-lg) {
     width: 100%;
+
+    &-arrow {
+      transform: rotate(0);
+    }
   }
 
   // IMPORTS

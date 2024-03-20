@@ -58,7 +58,7 @@ strong {
     min-height: 750px;
   }
 
-  &.sidebar-sm {
+  &.sidebar-close {
     .row {
       grid-template-columns: auto 4fr;
     }
@@ -72,7 +72,8 @@ strong {
 
       .menu {
         &-link {
-          span, strong {
+          span,
+          strong {
             display: none;
           }
         }
@@ -84,9 +85,42 @@ strong {
     }
   }
 
-  @media (min-width: $break-lg) {
+  &.sidebar-open {
+    .sidebar {
+      position: fixed;
+      width: calc(100% - (var(--spacing-box) * 2));
+      box-shadow: 0 3px 5px #999;
+
+      &-arrow {
+        transform: rotate(0);
+      }
+
+      .menu {
+        &-link {
+          span,
+          strong {
+            display: block;
+          }
+        }
+      }
+
+      .plan {
+        display: block;
+      }
+    }
+  }
+
+  @media (min-width: $break-tablet) {
     .row {
       grid-template-columns: 1fr 4fr;
+    }
+
+    &.sidebar-open {
+      .sidebar {
+        box-shadow: none;
+        position: relative;
+        width: fit-content;
+      }
     }
   }
 

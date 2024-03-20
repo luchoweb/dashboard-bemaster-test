@@ -1,12 +1,20 @@
-const mainDashboard = document.querySelector(".dashboard");
-const closeSidebarBtn = document.querySelector(".sidebar-arrow");
-const sidebarSmClassName = "sidebar-sm";
+const closeOpenSidebar = () => {
+  const mainDashboard = document.querySelector(".dashboard");
+  const closeSidebarBtn = document.querySelector(".sidebar-arrow");
 
-closeSidebarBtn.addEventListener("click", () => {
-  if (mainDashboard.classList.contains(sidebarSmClassName)) {
-    mainDashboard.classList.remove(sidebarSmClassName);
-    return;
-  }
+  const sidebarCloseClassName = "sidebar-close";
+  const sidebarOpenClassName = "sidebar-open";
 
-  mainDashboard.classList.add(sidebarSmClassName);
-});
+  closeSidebarBtn.addEventListener("click", () => {
+    if (mainDashboard.classList.contains(sidebarCloseClassName)) {
+      mainDashboard.classList.remove(sidebarCloseClassName);
+      mainDashboard.classList.add(sidebarOpenClassName);
+      return;
+    }
+
+    mainDashboard.classList.add(sidebarCloseClassName);
+    mainDashboard.classList.remove(sidebarOpenClassName);
+  });
+}
+
+window.onload = closeOpenSidebar;
