@@ -35,7 +35,7 @@ strong {
 }
 
 .dashboard {
-  padding: var(--spacing-box);
+  padding: var(--spacing-md-box);
 }
 .dashboard .row {
   display: grid;
@@ -81,6 +81,9 @@ strong {
   display: block;
 }
 @media (min-width: 768px) {
+  .dashboard {
+    padding: var(--spacing-box);
+  }
   .dashboard.sidebar-open .sidebar {
     box-shadow: none;
     position: relative;
@@ -252,6 +255,54 @@ strong {
   padding: 3rem;
   max-height: 100%;
   overflow-y: auto;
+}
+.dashboard .content .breadcrumb {
+  align-items: center;
+  display: flex;
+  gap: 0 var(--spacing-box);
+  margin: calc(var(--spacing-box) * -1) 0 2rem calc(var(--spacing-box) * -1);
+}
+.dashboard .content .breadcrumb-btn {
+  background-color: var(--color-primary);
+  border-radius: 5px;
+  color: white;
+  display: block;
+  height: 2rem;
+  line-height: 2rem;
+  padding: 5px;
+  transition: var(--transition);
+  width: 2rem;
+}
+.dashboard .content .breadcrumb-btn i {
+  font-size: 2rem;
+}
+.dashboard .content .breadcrumb-btn:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+}
+.dashboard .content .breadcrumb-list {
+  list-style: none;
+  margin: 0;
+  overflow-x: auto;
+  padding: 0;
+  white-space: nowrap;
+  width: 100%;
+}
+.dashboard .content .breadcrumb-list li {
+  display: inline-block;
+}
+.dashboard .content .breadcrumb-list li:not(:last-child)::after {
+  content: "/";
+  display: inline-block;
+  margin: 0 5px;
+}
+.dashboard .content .breadcrumb-list li.current {
+  font-weight: var(--fw-bold);
+}
+@media (min-width: 768px) {
+  .dashboard .content .breadcrumb {
+    font-size: 1.2rem;
+  }
 }
 .dashboard .content .files-container {
   overflow-x: auto;
