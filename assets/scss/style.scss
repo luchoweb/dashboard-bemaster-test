@@ -111,14 +111,22 @@ strong {
   }
 
   @media (min-width: $break-tablet) {
+    &.sidebar-open {
+      .sidebar {
+        box-shadow: none;
+        position: relative;
+        width: 250px;
+      }
+    }
+  }
+
+  @media (min-width: $break-lg) {
     .row {
       grid-template-columns: 1fr 4fr;
     }
 
     &.sidebar-open {
       .sidebar {
-        box-shadow: none;
-        position: relative;
         width: fit-content;
       }
     }

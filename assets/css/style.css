@@ -81,12 +81,17 @@ strong {
   display: block;
 }
 @media (min-width: 768px) {
+  .dashboard.sidebar-open .sidebar {
+    box-shadow: none;
+    position: relative;
+    width: 250px;
+  }
+}
+@media (min-width: 769px) {
   .dashboard .row {
     grid-template-columns: 1fr 4fr;
   }
   .dashboard.sidebar-open .sidebar {
-    box-shadow: none;
-    position: relative;
     width: fit-content;
   }
 }
