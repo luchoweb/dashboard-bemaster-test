@@ -269,7 +269,7 @@ strong {
   max-height: 100%;
   overflow-y: auto;
 }
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .dashboard .content .container {
     padding: 3rem;
   }
@@ -372,6 +372,43 @@ strong {
     font-size: 1.2rem;
   }
 }
+.dashboard .content .search {
+  margin-bottom: 2rem;
+}
+.dashboard .content .search-form {
+  align-items: center;
+  border: 1px solid var(--color-border);
+  border-radius: 5px;
+  display: flex;
+  padding: 5px 10px;
+  width: calc(100% - 20px);
+}
+.dashboard .content .search-form i {
+  border-right: 1px solid var(--color-border);
+  color: var(--color-border);
+  padding-right: 5px;
+}
+.dashboard .content .search-form input {
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  padding: 5px 10px;
+  width: calc(100% - 20px);
+}
+.dashboard .content .search-form input:focus {
+  outline: none;
+}
+.dashboard .content .search-form input::placeholder {
+  color: var(--color-border);
+}
+@media (min-width: 769px) {
+  .dashboard .content .search-form {
+    width: fit-content;
+  }
+  .dashboard .content .search-form input {
+    width: 400px;
+  }
+}
 .dashboard .content .files-container {
   overflow-x: auto;
 }
@@ -379,7 +416,7 @@ strong {
   border: none;
   border-spacing: 0;
   font-size: 14px;
-  min-width: 640px;
+  min-width: 600px;
   width: 100%;
 }
 .dashboard .content .files-table th,
