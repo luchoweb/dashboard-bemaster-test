@@ -3,13 +3,18 @@
   word-break: break-all;
 
   .container {
-    padding: 3rem;
+    padding: var(--spacing-box);
     max-height: 100%;
     overflow-y: auto;
+
+    @media (min-width: $break-tablet) {
+      padding: 3rem;
+    }
   }
 
   // IMPORTS
-  @import "./search";
+  @import "./tabs";
   @import "./breadcrumb";
+  @import "./search";
   @import "./table";
 }

@@ -34,6 +34,24 @@ strong {
   font-weight: var(--fw-bold);
 }
 
+.btn {
+  background-color: var(--color-bg);
+  border-radius: 5px;
+  color: black;
+  font-size: 13px;
+  padding: 8px 10px;
+  text-decoration: none;
+}
+.btn.has-icon {
+  align-items: center;
+  display: flex;
+  gap: 0 5px;
+}
+.btn-primary {
+  background-color: var(--color-primary);
+  color: white;
+}
+
 .dashboard {
   padding: var(--spacing-md-box);
 }
@@ -80,21 +98,16 @@ strong {
 .dashboard.sidebar-open .sidebar .plan {
   display: block;
 }
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .dashboard {
     padding: var(--spacing-box);
   }
-  .dashboard.sidebar-open .sidebar {
-    box-shadow: none;
-    position: relative;
-    width: 250px;
-  }
-}
-@media (min-width: 769px) {
   .dashboard .row {
     grid-template-columns: 1fr 4fr;
   }
   .dashboard.sidebar-open .sidebar {
+    box-shadow: none;
+    position: relative;
     width: fit-content;
   }
 }
@@ -252,9 +265,64 @@ strong {
   word-break: break-all;
 }
 .dashboard .content .container {
-  padding: 3rem;
+  padding: var(--spacing-box);
   max-height: 100%;
   overflow-y: auto;
+}
+@media (min-width: 768px) {
+  .dashboard .content .container {
+    padding: 3rem;
+  }
+}
+.dashboard .content .tabs {
+  margin-bottom: 2rem;
+}
+.dashboard .content .tabs-nav {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px var(--spacing-box);
+  margin-bottom: 1.5rem;
+}
+.dashboard .content .tabs-nav .tab {
+  align-items: center;
+  border-bottom: 3px solid transparent;
+  color: black;
+  display: flex;
+  gap: 0 5px;
+  font-size: 14px;
+  text-decoration: none;
+  transition: var(--transition);
+}
+.dashboard .content .tabs-nav .tab.active, .dashboard .content .tabs-nav .tab:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+.dashboard .content .tabs-btn {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 calc(var(--spacing-box) / 2);
+}
+.dashboard .content .tabs-btn .btn {
+  margin-bottom: 10px;
+  transition: var(--transition);
+}
+.dashboard .content .tabs-btn .btn:hover {
+  opacity: 0.8;
+}
+@media (min-width: 768px) {
+  .dashboard .content .tabs {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
+  .dashboard .content .tabs-nav {
+    margin-bottom: var(--spacing-box);
+  }
+  .dashboard .content .tabs-btn {
+    gap: 0 var(--spacing-box);
+  }
 }
 .dashboard .content .breadcrumb {
   align-items: center;

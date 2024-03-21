@@ -41,6 +41,26 @@ strong {
   font-weight: var(--fw-bold);
 }
 
+.btn {
+  background-color: var(--color-bg);
+  border-radius: 5px;
+  color: black;
+  font-size: 13px;
+  padding: 8px 10px;
+  text-decoration: none;
+
+  &.has-icon {
+    align-items: center;
+    display: flex;
+    gap: 0 5px;
+  }
+
+  &-primary {
+    background-color: var(--color-primary);
+    color: white;
+  }
+}
+
 .dashboard {
   padding: var(--spacing-md-box);
 
@@ -110,25 +130,17 @@ strong {
     }
   }
 
-  @media (min-width: $break-tablet) {
+  @media (min-width: $break-lg) {
     padding: var(--spacing-box);
 
-    &.sidebar-open {
-      .sidebar {
-        box-shadow: none;
-        position: relative;
-        width: 250px;
-      }
-    }
-  }
-
-  @media (min-width: $break-lg) {
     .row {
       grid-template-columns: 1fr 4fr;
     }
 
     &.sidebar-open {
       .sidebar {
+        box-shadow: none;
+        position: relative;
         width: fit-content;
       }
     }
