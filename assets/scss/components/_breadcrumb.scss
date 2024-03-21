@@ -2,7 +2,7 @@
   align-items: center;
   display: flex;
   gap: 0 var(--spacing-box);
-  margin: calc(var(--spacing-box) * -1) 0 2rem calc(var(--spacing-box) * -1);
+  margin-bottom: 2rem;
 
   &-btn {
     background-color: var(--color-primary);
